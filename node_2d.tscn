@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://dpduw3c37nvah"]
+
+[ext_resource type="Script" uid="uid://biow6ix3h6qw7" path="res://cosa.gd" id="1_0e48y"]
+[ext_resource type="Texture2D" uid="uid://fll0ucdqlxkv" path="res://Cat Sprite Sheet.png" id="1_wtcfe"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0e48y"]
+atlas = ExtResource("1_wtcfe")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_epypp"]
+atlas = ExtResource("1_wtcfe")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0hol4"]
+atlas = ExtResource("1_wtcfe")
+region = Rect2(64, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q6r6c"]
+atlas = ExtResource("1_wtcfe")
+region = Rect2(96, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kdubu"]
+atlas = ExtResource("1_wtcfe")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0wtfg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0e48y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epypp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0hol4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q6r6c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kdubu")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_epypp"]
+size = Vector2(13.954496, 13.884725)
+
+[node name="Node2D" type="Node2D" unique_id=625332214]
+position = Vector2(0, 2)
+script = ExtResource("1_0e48y")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1964305772]
+texture_filter = 1
+position = Vector2(102.56, 59.559998)
+scale = Vector2(8.66, 8.66)
+sprite_frames = SubResource("SpriteFrames_0wtfg")
+frame_progress = 0.4161759
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1578607237]
+position = Vector2(103.56, 71.56)
+scale = Vector2(1.655, 1.655)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=958226511]
+position = Vector2(-2.755291, 16.277958)
+scale = Vector2(8.66, 8.66)
+shape = SubResource("RectangleShape2D_epypp")
