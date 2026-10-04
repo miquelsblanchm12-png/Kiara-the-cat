@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://bupvu7i7byuhx"]
+
+[ext_resource type="Script" uid="uid://dwe33niv8g8il" path="res://ball.gd" id="1_41u45"]
+[ext_resource type="Texture2D" uid="uid://chol5abwiexm3" path="res://icon.svg" id="2_ktgx5"]
+[ext_resource type="Texture2D" uid="uid://1w1w3llp5r2i" path="res://New Piskel.png" id="3_ktgx5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
+radius = 21.095022
+
+[node name="Ball" type="Window" unique_id=2121854370]
+transparent_bg = true
+oversampling_override = 1.0
+position = Vector2i(0, 36)
+size = Vector2i(64, 64)
+borderless = true
+always_on_top = true
+transparent = true
+unfocusable = true
+script = ExtResource("1_41u45")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2010592187]
+visible = false
+position = Vector2(31.999998, 35)
+scale = Vector2(0.29, 0.29)
+texture = ExtResource("2_ktgx5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=132958865]
+position = Vector2(33, 36)
+shape = SubResource("CircleShape2D_g4v7s")
+
+[node name="NewPiskel" type="Sprite2D" parent="." unique_id=214349930]
+texture_filter = 1
+position = Vector2(36, 33)
+scale = Vector2(2, 2)
+texture = ExtResource("3_ktgx5")

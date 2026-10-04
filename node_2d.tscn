@@ -23,6 +23,38 @@ region = Rect2(96, 96, 32, 32)
 atlas = ExtResource("1_wtcfe")
 region = Rect2(0, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_d21ai"]
+atlas = ExtResource("1_wtcfe")
+region = Rect2(0, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rj586"]
+atlas = ExtResource("1_wtcfe")
+region = Rect2(32, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4d7sh"]
+atlas = ExtResource("1_wtcfe")
+region = Rect2(64, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ir8iy"]
+atlas = ExtResource("1_wtcfe")
+region = Rect2(96, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hqns4"]
+atlas = ExtResource("1_wtcfe")
+region = Rect2(128, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x0ka3"]
+atlas = ExtResource("1_wtcfe")
+region = Rect2(160, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0h7mo"]
+atlas = ExtResource("1_wtcfe")
+region = Rect2(192, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nr8wp"]
+atlas = ExtResource("1_wtcfe")
+region = Rect2(224, 160, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_0wtfg"]
 animations = [{
 "frames": [{
@@ -42,12 +74,41 @@ animations = [{
 "texture": SubResource("AtlasTexture_kdubu")
 }],
 "loop": 1,
-"name": &"default",
+"name": &"idle",
 "speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d21ai")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rj586")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4d7sh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ir8iy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hqns4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x0ka3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0h7mo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nr8wp")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_epypp"]
-size = Vector2(13.954496, 13.884725)
+size = Vector2(7.8842907, 6.628387)
 
 [node name="Node2D" type="Node2D" unique_id=625332214]
 position = Vector2(0, 2)
@@ -58,13 +119,14 @@ texture_filter = 1
 position = Vector2(102.56, 59.559998)
 scale = Vector2(8.66, 8.66)
 sprite_frames = SubResource("SpriteFrames_0wtfg")
-frame_progress = 0.4161759
+animation = &"walk"
+frame_progress = 0.07153456
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1578607237]
 position = Vector2(103.56, 71.56)
 scale = Vector2(1.655, 1.655)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=958226511]
-position = Vector2(-2.755291, 16.277958)
+position = Vector2(2.3806686, 47.6979)
 scale = Vector2(8.66, 8.66)
 shape = SubResource("RectangleShape2D_epypp")
