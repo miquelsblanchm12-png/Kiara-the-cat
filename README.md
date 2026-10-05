@@ -10,7 +10,7 @@ The cat and the ball are borderless, transparent, always-on-top windows that mov
 
 - Left click and drag: move the cat or the ball. The ball is thrown with the speed you release it at.
 - F9: send the cat to the bottom right corner and park it. Press again to release it.
-- F10: make the cat go to the ball.
+
 
 ## Made in godot
 shebas
